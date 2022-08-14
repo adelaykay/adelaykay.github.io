@@ -1,0 +1,448 @@
+body{
+    background-color: var(--bg1);
+    /* opacity: 40%; */
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box; 
+    user-select: none;
+    /* line-height: 1.7; */
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(24, 24, 83);
+}
+
+:root{
+    font-size: 16px;
+}
+
+*{
+    /* --container-bg: transparent; */
+    /* --bg1: #b6b6ff;
+    --bg2: rgba(0, 0, 0, 0.5); */
+    --bg1: #fce8e8;
+    --bg2: rgb(154, 200, 240);
+    --bg3: white;
+    --bg4:  rgba(128, 128, 128, 0.61);
+    --b5: black;
+    --color1: red;
+    --shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    --line-h: 1.7;
+    --transition: all 400ms ease;
+
+}
+
+.title{
+    text-align: center;
+}
+
+h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+h2{
+    font-size: 2rem;
+    font-weight: bold;
+}
+h3{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+h4{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+a{
+    color: var(--color-text);
+}
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ============================styles========================== */
+.general-home{
+    display: flex;
+    
+}
+
+/* ========menu======= */
+.menu{
+    
+    background-color: var(--bg4);
+}
+
+.icon{
+   
+    position: relative;
+    margin-top: 0.6rem; 
+    font-size: 1.5rem;
+    color: var(--b5);
+    top: 10rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.dashBoard{
+    border-left: 3px solid var(--color1);
+    border-right: 3px solid var(--color1);
+}
+/* ========menu end======= */
+
+
+
+/* ====================================Student===================================== */
+
+/* ============categories======== */
+.categories{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1.2rem;
+    margin: 0.8rem;
+    grid-template-areas:    " item1 item2 item3 item3"
+                            " item1 item4 item3 item3"
+                            " item6 item5 item3 item3"
+                            " item6 item5 item3 item3";
+                            height: 950px;
+}
+
+.card{
+    background-color: var(--bg2);
+    border-radius: 0.6rem;
+    
+    text-align: center;
+    transition: var(--transition);
+}
+.card:hover{
+    box-shadow: var(--shadow);
+    border: 2px solid;
+}
+
+.card:focus{
+    border: 3px black solid;
+}
+
+.link{
+    font-size: 1.1rem;
+    position: relative;
+    text-align: left;
+    position: relative;
+    top: 5rem;
+    margin-left: 2rem;
+    color: var(--bg3);
+}
+
+
+
+/* ==========profile========= */
+.profile{
+    padding: 2rem;
+    line-height: var(--line-h);
+    grid-area: item1;
+}
+.profile-image{
+    height: 7rem;
+    width: 7rem;
+    background-color: var(--bg2);
+    color: var(--bg3);
+    border-radius: 50%;
+    font-size: 3rem;
+    margin: 0 auto;
+}
+
+
+
+/* ========result========== */
+.result{
+    grid-area: item2;
+}
+.student{
+    font-size: 6rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.link-result{
+    top: 20%;
+}
+
+
+
+/* =======academic progress========= */
+.display-box{
+    grid-area: item3;
+    padding-top: 1rem;
+    
+}
+.message{
+    font-size: 6rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+/* ============study resource============= */
+.study-resource{
+    grid-area: item4;
+    font-size: 6rem;
+}
+.resource{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.link-resource{
+   top: 18%;
+}
+
+
+
+/* ===========revision============ */
+.revision{
+    grid-area: item5;
+    font-size: 6rem;
+}
+.extra{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+/* =============Acad Progress========== */
+.acad{
+    grid-area: item6;
+    
+}
+
+
+
+/* ==========javascript ========= */
+/* =================result============= */
+
+.result-info{
+    display:none;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 0.8rem;
+}
+.info h3{
+    margin-bottom: 1.2rem;
+}
+
+/* =======resources========= */
+.resources-info{
+    display: none;
+    margin: 2rem;
+}
+.resources-info table, resources-info th, resources-info td{
+    border: 2px solid;   
+    border-collapse: collapse;
+    width: 100%;
+    height: 20rem;
+    text-align: left;
+}
+.resources-info td{
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+.resources-info a{
+    color: red;
+    font-size: 1rem;
+}
+.videos{
+    margin: 4rem;
+}
+
+/* ============revison/extra classes========= */
+.notification-table{
+    display: none;
+    margin: 2rem;
+}
+.notification-table, .notification-table th, .notification-table td{
+    border-bottom: 2px solid;   
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    height: fit-content;
+    text-align: left;
+    padding: 1rem;
+}
+.notification table{
+    border: 2px solid;
+}
+.notification th{
+    font-size: 1.5rem;
+}
+.notification td{
+    height: 0.2rem;
+}
+img{
+    width: 3rem;
+}
+.notification li img{
+    display: inline-block;
+    width: 1.2rem;
+}
+
+
+
+/* ===========acad=========== */
+
+/* ================close button============== */
+.closebtn{
+    font-size: 0.1rem;
+    position: relative;
+    color: var(--color1);
+    width: 2rem;
+    left: 95%;
+}
+.closebtn1{
+    font-size: 0.1rem;
+    position: relative;
+    color: var(--color1);
+    width: 2rem;
+    left: 95%;
+}
+.closebtn2{
+    font-size: 0.1rem;
+    position: relative;
+    color: var(--color1);
+    width: 2rem;
+    left: 95%;
+}
+
+
+/* ==========focus========== */
+.focus-border{
+        border: 3px solid black;
+    }
+
+
+
+
+
+
+/* ============================Parent============================ */
+
+
+
+
+
+
+
+/* ===========Media queries============== */
+@media (max-width: 600px){
+        .general-home{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .menu{
+            height: fit-content;
+            display: flex;
+            gap: 1rem;
+            display: none;
+        }
+        .menu1{
+            
+            display: flex;
+            gap: 1rem;
+           
+
+        }
+
+        .categories{
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+
+
+                        /* ======navbar========= */
+                        /* Style the navigation menu */
+                .topnav {
+                    overflow: hidden;
+                    background-color: #333;
+                    position: relative;
+                }
+                
+                /* Hide the links inside the navigation menu (except for logo/home) */
+                .topnav #myLinks {
+                    display: none;
+                }
+                
+                /* Style navigation menu links */
+                .topnav a {
+                    color: white;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    display: block;
+                }
+                
+                /* Style the hamburger menu */
+                .topnav a.icon {
+                    background: black;
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: -18%;
+                }
+                
+                /* Add a grey background color on mouse-over */
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+                
+                /* Style the active link (or home/logo) */
+                .active {
+                    background-color: var(--bg4);
+                    color: white;
+                }
+
+
+                .stu-table{
+                    display: none;
+                }
+
+                .academic-progress h3{
+                    padding: 0;
+                    text-align: center;
+                }
+}
+
+
+@media(min-width: 920px){
+    .categories{
+        width: 450rem;
+        height: 97vh;
+    }
+    .menu1{
+        display: none;
+    }
+
+    nav{
+        display: none;
+    }
+
+}
