@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>eStudiez</title>
 
     <!-- CSS only -->
     <link
@@ -148,6 +148,7 @@
                     id="email"
                     name="email"
                     placeholder="Enter your email address"
+                    title="Example: abc@yahoo.com"
                     required
                   />
                   <label for="user_id">Username</label>
@@ -157,6 +158,7 @@
                     id="username"
                     name="username"
                     placeholder="Enter your username"
+                    title="Must have at least 2 characters of alphabet"
                     required
                   />
                   <label for="first_name">First Name</label>
@@ -184,6 +186,8 @@
                     id="password"
                     name="password"
                     placeholder="Enter your password"
+                    min="6"
+                    title="Must have at least 6 characters, including UPPER/lowercase letters and number"
                     required
                   />
                   <label for="confirmPassword">Confirm Password</label>
@@ -194,6 +198,7 @@
                     name="confirmPassword"
                     placeholder="Confirm password"
                     required
+                    onchange="()=>{if((this).val()!=(this).previousSibling.previousSibling.value){}}"
                   />
                   <div class="parentHide">
                     <label for="eduClass">Select your class</label>
@@ -240,9 +245,7 @@
                     required
                   /><br />
                   <div class="facHide studHide">
-                    <label for="childId" id="childId"
-                      >Child/Ward's Username</label
-                    ><br />
+                    <label for="childId">Child/Ward's Username</label><br />
                     <input
                       type="text"
                       name="childId"
@@ -317,7 +320,7 @@
                 >
                   <div>
                     <label class="loginEmail" id="emailLabel" for="loginEmail"
-                      >Username</label
+                      >Email</label
                     >
                     <input
                       type="text"

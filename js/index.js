@@ -33,5 +33,5 @@ const setCategory = cat => {
 // sign user out of auth session
 const logout = () => {
   auth.signOut()
-  window.location.replace('./landing.html')
+  window.location.replace('./index.html')
 }

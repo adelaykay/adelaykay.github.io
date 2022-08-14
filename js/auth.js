@@ -37,7 +37,7 @@ signupForm.addEventListener('submit', e => {
       let user = cred.user
       console.log(user)
       //Confirmation mail
-      user.sendEmailVerification()
+      // user.sendEmailConfirmation()
 
       // Save user data to database
       // users.addUser(userDetails)
@@ -50,7 +50,7 @@ signupForm.addEventListener('submit', e => {
       }
     })
     .catch(error => {
-      console.log(error.message)
+      alert(error.message)
     })
 })
 

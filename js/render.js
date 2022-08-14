@@ -4,13 +4,16 @@ const users = new Users()
 auth.onAuthStateChanged(user => {
   if (user) {
     const email = user.email
-    users.usersRef.where('email', '==', email).onSnapshot(snapshot => {
-      snapshot.docChanges().forEach(change => {
-        const id = change.doc.id
-        console.log(change.doc.data())
-        renderProfile(change.doc.data())
+    users.usersRef
+      .where('email', '==', email)
+      .onSnapshot(snapshot => {
+        snapshot.docChanges().forEach(change => {
+          const id = change.doc.id
+          console.log(change.doc.data())
+          renderProfile(change.doc.data())
+        })
       })
-    })
+      .catch(err => alert(err.message))
   }
 })
 
