@@ -158,7 +158,8 @@
                     id="username"
                     name="username"
                     placeholder="Enter your username"
-                    title="Must have at least 2 characters of alphabet"
+                    pattern="[a-zA-Z]{4,}"
+                    title="Must have at least 4 characters of alphabet"
                     required
                   />
                   <label for="first_name">First Name</label>
@@ -168,6 +169,8 @@
                     id="first_name"
                     name="first_name"
                     placeholder="Enter your first name"
+                    pattern="[a-zA-Z]{2,}"
+                    title="Must have at least 2 characters of alphabet"
                     required
                   />
                   <label for="last_name">Last Name</label>
@@ -177,6 +180,8 @@
                     id="last_name"
                     name="last_name"
                     placeholder="Enter your last name"
+                    pattern="[a-zA-Z]{2,}"
+                    title="Must have at least 2 characters of alphabet"
                     required
                   />
                   <label for="password">Password</label>
@@ -186,7 +191,7 @@
                     id="password"
                     name="password"
                     placeholder="Enter your password"
-                    min="6"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}"
                     title="Must have at least 6 characters, including UPPER/lowercase letters and number"
                     required
                   />
@@ -197,11 +202,12 @@
                     id="confirmPassword"
                     name="confirmPassword"
                     placeholder="Confirm password"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,}"
+                    title="Must be the same password as above"
                     required
-                    onchange="()=>{if((this).val()!=(this).previousSibling.previousSibling.value){}}"
                   />
                   <div class="parentHide">
-                    <label for="eduClass">Select your class</label>
+                    <label for="eduClass">Select your class:</label>
                     <select
                       class="form-control"
                       id="eduClass"
@@ -224,6 +230,9 @@
                       name="age"
                       class="age"
                       placeholder="Age"
+                      pattern="[1-9]{1,2}"
+                      title="Numeric value must be used"
+                      min="3"
                     />
                   </div>
                   <br />

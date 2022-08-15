@@ -48,6 +48,7 @@ class Users {
       age,
       gender,
       category: this.category,
+      eduClass,
       reg_date,
     }
     console.log(userData)
@@ -60,7 +61,7 @@ class Users {
       }
       this.studentsRef
         .add(studentData)
-        .then(() => console.log(`${username} added`))
+        .then(() => console.log(`studentData added`))
     }
     return this
   }

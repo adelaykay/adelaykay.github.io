@@ -15,7 +15,7 @@ signupForm.addEventListener('submit', e => {
   // prevent default behaviour of form submit event
   e.preventDefault()
   console.log('submitting...')
-
+  // extract form data
   const data = new FormData(e.target)
   const userDetails = {}
 
@@ -23,34 +23,33 @@ signupForm.addEventListener('submit', e => {
     userDetails[name] = value
   }
 
-  users.addUser(userDetails)
-  const modal = document.querySelector('[data-modal]')
   // pick values from form fields
-  const email = signupForm.email.value
-  const password = signupForm.password.value
+  // const email = signupForm.email.value
+  // const password = signupForm.password.value
 
   // authenticate user with email and password
   auth
-    .createUserWithEmailAndPassword(email, password)
+    .createUserWithEmailAndPassword(userDetails.email, userDetails.password)
     .then(cred => {
       // Recieve sign in response
       let user = cred.user
       console.log(user)
       //Confirmation mail
-      // user.sendEmailConfirmation()
+      // user.sendEmailVerification()
 
       // Save user data to database
       // users.addUser(userDetails)
+      users.addUser(userDetails).then(() => {
+        signupForm.reset()
 
-      signupForm.reset()
-
-      users.getUser(user.email)
-      if (user) {
-        window.location.replace('./dashboard.html')
-      }
+        // users.getUser(user.email)
+        if (user) {
+          window.location.replace('./dashboard.html')
+        }
+      })
     })
     .catch(error => {
-      alert(error.message)
+      console.log(error.message)
     })
 })
 
