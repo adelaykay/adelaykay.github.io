@@ -4,16 +4,13 @@ const users = new Users()
 auth.onAuthStateChanged(user => {
   if (user) {
     const email = user.email
-    users.usersRef
-      .where('email', '==', email)
-      .onSnapshot(snapshot => {
-        snapshot.docChanges().forEach(change => {
-          const id = change.doc.id
-          console.log(change.doc.data())
-          renderProfile(change.doc.data())
-        })
+    users.usersRef.where('email', '==', email).onSnapshot(snapshot => {
+      snapshot.docChanges().forEach(change => {
+        const id = change.doc.id
+        console.log(change.doc.data())
+        renderProfile(change.doc.data())
       })
-      .catch(err => alert(err.message))
+    })
   }
 })
 
@@ -41,9 +38,16 @@ const renderProfile = ({
   email,
   category,
 }) => {
-  const profile = document.querySelector(
-    'body > div > div.edit-categories.categories > div.profile.card'
-  )
+  let profile
+  if (category == 'Faculty') {
+    profile = document.querySelector(
+      'body > div > div.edit-categories.categories > div.profile.card'
+    )
+  } else if (category == 'Student') {
+    profile = document.querySelector(
+      'body > div > div.categories.stud > div.profile.card'
+    )
+  }
   console.log(first_name + ' ' + last_name + ' ' + gender)
   const html = `
             <div class="profile-image"><i class="fa-solid fa-user"></i></div>
