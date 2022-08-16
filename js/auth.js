@@ -49,7 +49,7 @@ signupForm.addEventListener('submit', e => {
       })
     })
     .catch(error => {
-      console.log(error.message)
+      alert(error.message)
     })
 })
 
@@ -69,6 +69,6 @@ loginForm.addEventListener('submit', e => {
       }
     })
     .catch(err => {
-      console.log(err.message)
+      alert(err.message)
     })
 })

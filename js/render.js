@@ -1,14 +1,27 @@
 const users = new Users()
 
+// checking auth state
+checkAuth()
+
+async function checkAuth() {
+  console.log('checking auth state')
+  const user = await auth.currentUser
+  console.log(user)
+  // if (!user) {
+  //   logout()
+  // }
+}
+
 // subscription to auth changes
 auth.onAuthStateChanged(user => {
   console.log('subscribing to auth changes')
   if (user) {
+    console.log(user)
     const email = user.email
     users.usersRef.where('email', '==', email).onSnapshot(snapshot => {
       snapshot.docChanges().forEach(change => {
         const id = change.doc.id
-        console.log(change.doc.data())
+        // console.log(change.doc.data())
         renderProfile(change.doc.data())
       })
     })
