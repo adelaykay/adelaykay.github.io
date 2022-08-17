@@ -26,33 +26,67 @@ class Users {
     })
   }
 
-  async addUser(userDetails) {
-    const {
-      first_name,
-      last_name,
-      email,
-      username,
-      gender,
-      age,
-      eduClass,
-      childId,
-    } = userDetails
+  async addUser({
+    first_name,
+    last_name,
+    email,
+    username,
+    gender,
+    age,
+    eduClass,
+    address,
+    childId,
+  }) {
     const now = new Date()
     const reg_date = firebase.firestore.Timestamp.fromDate(now)
-    const userData = {
-      first_name,
-      last_name,
-      username,
-      email,
-      // address: { street, city, state },
-      age,
-      gender,
-      category: this.category,
-      eduClass,
-      reg_date,
+
+    if(this.category == 'Parent'){
+      const userData = {
+        first_name,
+        last_name,
+        username,
+        email,
+        gender,
+        address,
+        category: this.category,
+        childId,
+        reg_date,
+      }
+      console.log(userData)
+      const response = await this.usersRef.add(userData)
+    } else if(this.category == 'Student'){
+      const userData = {
+        first_name,
+        last_name,
+        username,
+        email,
+        age,
+        gender,
+        address,
+        category: this.category,
+        eduClass,
+        reg_date,
+      }
+      console.log(userData)
+      const response = await this.usersRef.add(userData)
+    } else if(this.category == 'Faculty'){
+      const userData = {
+        first_name,
+        last_name,
+        username,
+        email,
+        gender,
+        address,
+        category: this.category,
+        eduClass,
+        reg_date,
+      }
+      console.log(userData)
+      const response = await this.usersRef.add(userData)
     }
-    console.log(userData)
-    const response = await this.usersRef.add(userData)
+
+    
+    
     if (this.category.toLowerCase() == 'student') {
       const studentData = {
         class: eduClass,

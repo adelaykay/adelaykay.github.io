@@ -41,107 +41,11 @@
     <!-- end google font monserrat -->
   </head>
   <body class="h-100">
-    <!-- <style>
-    *{
-  padding: 0;
-  margin: 0;
-  font-family:'Montserrat';  
-}
-
-.wallpaper{
-    width: 100%;
-    height: 100vh;
-    background-image: url(https://wallpaperaccess.com/full/1771974.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-     overflow: hidden;
-     color: black;
-}
-
-.sign{
-
-    width: 100px;
-    height: 40px;
-    color: black;
-    border-radius: 20px;
-    border: solid 2px black;
-    padding: 5px; 
-    margin-top: -5px;
-    margin-left: 100px;
-}
-
-
-.sign2{
-
-width: 100px;
-height: 40px;
-color:black;
-border-radius: 20px;
-border:solid  2px black;
-/* margin-top: px; */
-position: absolute;
-bottom: 285px;
-left: 210px;
-}
-
-
-.both1{
-    display: flex;
-    margin-left: 110px;
-    gap: 5px;
-    text-align: center;
-    
-}
-
-.sign:hover{
-    background-color: royalblue;
-    
-}
-
-
-.sign2:hover:hover{
-    background-color: royalblue;
-    
-}
-
-.welcome{
-    margin-top: 160px;
-    margin-left: 100px;
-    font-family: 'Montserrat';
-}
-
-
-.modal-title{
-  color: white;
-}
-
-.modal-header{
-  background-color: royalblue;
-
-}
-
-.modal-body{
-  color: black;
-}
-.modal-footer{
-  background-color:white;
-}
-
-.sub{
-  width: 100px;
-  height: 30px;
-  background-color: green;
-  color: black;
-  text-align: center;
-}
-
-</style> -->
     <div
       class="wallpaper vh-100"
       style="
-        background: url(https://wallpaperaccess.com/full/1771974.jpg) center fixed
-          ;
+        background: url(https://wallpaperaccess.com/full/1771974.jpg) center
+          fixed;
       "
     >
       <img src="./images/logo-main-blue.png" width="200px" class="p-1" />
@@ -155,27 +59,30 @@ left: 210px;
           <p>Begin your journey to excellence</p>
         </div>
 
-        
         <div class="list-unstyled d-flex">
           <!-- Signup button  -->
-          <li class="p-2"><a
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            href="#exampleModalToggle"
-            role="button"
-            >Sign up</a
-          ></li>
+          <li class="p-2">
+            <a
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              href="#exampleModalToggle"
+              role="button"
+              >Sign up</a
+            >
+          </li>
 
           <!-- Login button  -->
-          <li class="p-2"><button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal5"
-            data-bs-whatever="@mdo"
-          >
-            Sign in
-          </button></li>
+          <li class="p-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal5"
+              data-bs-whatever="@mdo"
+            >
+              Sign in
+            </button>
+          </li>
         </div>
         <!-- Sign up form -->
         <div
@@ -269,7 +176,7 @@ left: 210px;
                     placeholder="Enter your email address"
                     required
                   />
-                  <label for="user_id">Username</label>
+                  <!-- <label for="user_id">Username</label>
                   <input
                     type="text"
                     class="form-control"
@@ -277,7 +184,7 @@ left: 210px;
                     name="username"
                     placeholder="Enter your username"
                     required
-                  />
+                  /> -->
                   <label for="first_name">First Name</label>
                   <input
                     type="text"
@@ -314,6 +221,15 @@ left: 210px;
                     placeholder="Confirm password"
                     required
                   />
+                  <label for="address">Address</label><br />
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    name="address"
+                    placeholder="Address"
+                    required
+                  /><br />
                   <div class="parentHide">
                     <label for="eduClass">Select your class</label>
                     <select
@@ -347,6 +263,7 @@ left: 210px;
                     type="radio"
                     name="gender"
                     class="ms-3"
+                    value="Male"
                     required
                   /><br />
                   <label for="gender">Female</label>
@@ -354,11 +271,11 @@ left: 210px;
                     type="radio"
                     name="gender"
                     class="ms-1 mb-3"
+                    value="Female"
                     required
                   /><br />
                   <div class="facHide studHide">
-                    <label for="childId" id="childId"
-                      >Child/Ward's Username</label
+                    <label for="childId" id="childId">Child/Ward's Email</label
                     ><br />
                     <input
                       type="text"
@@ -413,7 +330,7 @@ left: 210px;
                 >
                   <div>
                     <label class="loginEmail" id="emailLabel" for="loginEmail"
-                      >Username</label
+                      >Email Address</label
                     >
                     <input
                       type="text"

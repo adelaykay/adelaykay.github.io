@@ -21,7 +21,7 @@ auth.onAuthStateChanged(user => {
     users.usersRef.where('email', '==', email).onSnapshot(snapshot => {
       snapshot.docChanges().forEach(change => {
         const id = change.doc.id
-        // console.log(change.doc.data())
+        console.log(change.doc.data())
         renderProfile(change.doc.data())
       })
     })
@@ -58,7 +58,9 @@ const renderProfile = ({
   const stud = document.querySelector('.stud')
   const teach = document.querySelector('.teach')
   if (category == 'Faculty') {
-    profile = document.querySelector("body > div > div.categories.stud > div.profile.card")
+    profile = document.querySelector(
+      'body > div > div.categories.stud > div.profile.card'
+    )
     html = `
             <div class="profile-image"><i class="fa-solid fa-user"></i></div>
             <h3 class="title">
@@ -80,7 +82,7 @@ const renderProfile = ({
     teach.style.display = 'grid'
     teach.style.display = 'none'
     console.log(profile)
-  } else if (category == 'Student') {
+  } else if (category == 'Student' || category == 'Parent') {
     profile = document.querySelector(
       'body > div > div.categories.stud > div.profile.card'
     )
@@ -93,7 +95,7 @@ const renderProfile = ({
             <hr>
             <p>
                 <span id="gender">${gender}</span> -
-                <span id="age">${age}</span> YRS OLD
+                <span id="age">${age && age}</span> YRS OLD
                 <br>
                 <span id="gmail">${email}</span>
                 <br>
