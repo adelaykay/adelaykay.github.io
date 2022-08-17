@@ -55,10 +55,10 @@ const renderProfile = ({
 }) => {
   let profile
   let html
+  const stud = document.querySelector('.stud')
+  const teach = document.querySelector('.teach')
   if (category == 'Faculty') {
-    profile = document.querySelector(
-      'body > div > div.edit-categories.categories > div.profile.card'
-    )
+    profile = document.querySelector("body > div > div.categories.stud > div.profile.card")
     html = `
             <div class="profile-image"><i class="fa-solid fa-user"></i></div>
             <h3 class="title">
@@ -77,6 +77,8 @@ const renderProfile = ({
             </p>
         `
     profile.innerHTML = html
+    teach.style.display = 'grid'
+    teach.style.display = 'none'
     console.log(profile)
   } else if (category == 'Student') {
     profile = document.querySelector(
