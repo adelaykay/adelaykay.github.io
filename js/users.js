@@ -40,11 +40,10 @@ class Users {
     const now = new Date()
     const reg_date = firebase.firestore.Timestamp.fromDate(now)
 
-    if(this.category == 'Parent'){
+    if (this.category == 'Parent') {
       const userData = {
         first_name,
         last_name,
-        username,
         email,
         gender,
         address,
@@ -54,11 +53,10 @@ class Users {
       }
       console.log(userData)
       const response = await this.usersRef.add(userData)
-    } else if(this.category == 'Student'){
+    } else if (this.category == 'Student') {
       const userData = {
         first_name,
         last_name,
-        username,
         email,
         age,
         gender,
@@ -69,11 +67,10 @@ class Users {
       }
       console.log(userData)
       const response = await this.usersRef.add(userData)
-    } else if(this.category == 'Faculty'){
+    } else if (this.category == 'Faculty') {
       const userData = {
         first_name,
         last_name,
-        username,
         email,
         gender,
         address,
@@ -85,13 +82,12 @@ class Users {
       const response = await this.usersRef.add(userData)
     }
 
-    
-    
     if (this.category.toLowerCase() == 'student') {
       const studentData = {
         class: eduClass,
         reg_date,
-        username,
+        first_name,
+        last_name,
       }
       this.studentsRef
         .add(studentData)
