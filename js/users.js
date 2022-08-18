@@ -30,7 +30,6 @@ class Users {
     first_name,
     last_name,
     email,
-    username,
     gender,
     age,
     eduClass,
