@@ -14,7 +14,7 @@ const signupForm = document.querySelector('#signup')
 signupForm.addEventListener('submit', e => {
   // prevent default behaviour of form submit event
   e.preventDefault()
-  console.log('submitting...')
+  // console.log('submitting...')
   // extract form data
   const data = new FormData(e.target)
   const userDetails = {}
@@ -33,7 +33,7 @@ signupForm.addEventListener('submit', e => {
     .then(cred => {
       // Recieve sign in response
       let user = cred.user
-      console.log(user)
+      // console.log(user)
       //Confirmation mail
       // user.sendEmailVerification()
 

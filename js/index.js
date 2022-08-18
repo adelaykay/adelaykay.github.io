@@ -1,6 +1,6 @@
 const setCategory = cat => {
   users.category = cat
-  console.log('category: ', cat)
+  // console.log('category: ', cat)
   document.querySelector('.signupTitle').textContent = `${cat} Sign Up`
   if (cat == 'Student') {
     document

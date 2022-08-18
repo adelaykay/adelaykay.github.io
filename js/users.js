@@ -15,13 +15,13 @@ class Users {
   getUser(user) {
     this.usersRef.where('email', '==', user).onSnapshot(snapshot => {
       snapshot.docChanges().forEach(change => {
-        console.log(
-          change.doc.data().first_name +
-            ' ' +
-            change.doc.data().last_name +
-            ' ' +
-            change.doc.id
-        )
+        // console.log(
+        //   change.doc.data().first_name +
+        //     ' ' +
+        //     change.doc.data().last_name +
+        //     ' ' +
+        //     change.doc.id
+        // )
       })
     })
   }
@@ -50,7 +50,7 @@ class Users {
         childId,
         reg_date,
       }
-      console.log(userData)
+      // console.log(userData)
       const response = await this.usersRef.add(userData)
     } else if (this.category == 'Student') {
       const userData = {
@@ -77,7 +77,7 @@ class Users {
         eduClass,
         reg_date,
       }
-      console.log(userData)
+      // console.log(userData)
       const response = await this.usersRef.add(userData)
     }
 
