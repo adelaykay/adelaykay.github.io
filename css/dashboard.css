@@ -10,6 +10,7 @@ body{
     list-style-type: none;
     font-family: 'Montserrat', sans-serif;
     color: rgb(24, 24, 83);
+    
 }
 
 :root{
@@ -62,7 +63,7 @@ img{
 }
 
 
-/* ============================styles========================== */
+                                    /* ===========styles========== */
 .general-home{
     display: flex;
     
@@ -100,24 +101,22 @@ img{
 .stud{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 0.8rem;
-    padding: 0.5rem;
+    grid-gap: 1rem;
+    margin: 1rem;
     grid-template-areas:    " item1 item2 item3 item3"
                             " item1 item4 item3 item3"
                             " item6 item5 item3 item3"
                             " item6 item5 item3 item3";
-                            height: 950px;
 }
 .teach{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 1.2rem;
-    padding: 0.8rem;
+    grid-gap: 1rem;
+    margin: 1rem;
     grid-template-areas:    " item1 item2 item3 item3"
                             " item1 item4 item3 item3"
                             " item6 item5 item3 item3"
                             " item6 item5 item3 item3";
-                            height: 950px;
 }
 
 
@@ -306,6 +305,7 @@ img{
     display: inline-block;
     width: 1.2rem;
 }
+
 /* ==============student acad============== */
 .student-acad{
     display: none;
@@ -314,6 +314,8 @@ img{
     width: 70%;
     margin: 0 auto;
 }
+
+
 
 
 
@@ -328,10 +330,11 @@ img{
 }
 .closebtn1{
     font-size: 0.1rem;
-    position: relative;
+    position: sticky;
     color: var(--color1);
     width: 2rem;
     left: 95%;
+    top: 0;
 }
 .closebtn2{
     font-size: 0.1rem;
@@ -355,6 +358,14 @@ img{
 
 
 /* =================================teacher========================== */
+.submit{
+    background-color: black;
+    color: white;
+    margin-top: 1.5rem;
+    height: 2rem;
+    width: 8rem;
+    font-weight: bold;
+}
 /* =====result======= */
 .admin-update{
     display: none;
@@ -380,15 +391,6 @@ img{
 .admin-update input{
     width: 30%;
 }
-.admin-update [type = submit]{
-    background-color: black;
-    color: white;
-    margin-top: 2rem;
-    height: 3rem;
-    width: 8rem;
-    font-weight: bold;
-}
-
 
 /* =========resources========= */
 .teach-resource{
@@ -397,17 +399,11 @@ img{
 .teach-resource table{
     height: 0.2rem;
 }
-.teach-resource [type = submit]{
-    background-color: black;
-    color: white;
-    margin-top: -10rem;
-    height: 3rem;
-    width: 8rem;
-    font-weight: bold;
-}
-
 .teach-resource teach-vid-upd{
     margin-top: -30px;
+}
+.videos{
+    margin-bottom: -0.8rem;
 }
 
 /* ===============acad progress=========== */
@@ -419,8 +415,34 @@ img{
     width: 70%;
 }
 
+/* ===========extra classes======== */
+.teach-info table, .table-info td, .teach-info th{
+    border: 2px solid;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: -1rem;
+}
+.teach-info td{
+    border-bottom: 2px solid ;
+    padding:  0.5rem 1rem;
+}
+.closebtn4{
+    left: 90%;
+}
+.teach-info{
+    padding: 1rem;
+    display: none;
+}
 
 
+/*==displaybox student==*/
+.display-box{
+    display: none;
+}
+/*==displaybox teacher==*/
+.display-box1{
+    display: none;
+}
 
 
 /* =========student display grid. and set teacher
@@ -437,12 +459,10 @@ grid to none applies to vice versa============*/
 
 /* ================================Media queries================================= */
 @media (max-width: 900px){
-
-
-
-/* =======================change profile from here=================== */
+/*=====change profile from here===== */
 .stud{
     margin-top: 3rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:     "item1"
@@ -455,6 +475,7 @@ grid to none applies to vice versa============*/
 }
 .teach{
     margin-top: 3rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:     "item1"
@@ -477,34 +498,22 @@ grid to none applies to vice versa============*/
 body{
     width: 100%;
 }
-
-/* ====display=== */
-.display-box1{
-    display: none;
-}
-
-
 .general-home{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .menu{
     height: fit-content;
     display: flex;
     gap: 1rem;
     display: none;
 }
-.menu1{
-    
+.menu1{  
     display: flex;
     gap: 1rem;
-    
-
 }
 
-/*
 
 /*===============================navbar========================= */
         /* Style the navigation menu */
@@ -555,6 +564,7 @@ body{
 
 
 
+
 /* ==============result table Teacher=========== */
 .admin-update th{
     display: none;
@@ -567,7 +577,7 @@ body{
     color: var(--bg3);
 }
 .admin-update td:nth-child(2){
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.623);
     color: var(--bg3);
 }
 .admin-update td:first-child::before{
@@ -597,7 +607,6 @@ body{
 }
 td::before{
     float: left;
-    margin-right: 3rem;
     font-weight: bold;
 }
 .admin-update{
@@ -607,7 +616,7 @@ td::before{
 
 
 /* ================result student================ */
-.result-info
+
 .result-info th{
     display: none;
 }
@@ -622,27 +631,13 @@ td::before{
     background-color: #333;
     color: var(--bg3);
 }
-.result-info td:first-child::before{
-    content: "First-Name:";
-}
 .result-info td:nth-child(2)::before{
-    content: "Last-Name:";
+    content: "Subject:";
 }
 .result-info td:nth-child(3)::before{
-    content: "Last-Name:";
+    content: "Score:";
 }
-.result-info td:nth-child(4)::before{
-    content: "Math:";
-}
-.result-info td:nth-child(5)::before{
-    content: "English:";
-}
-.result-info td:nth-child(6)::before{
-    content: "Chemisry:";
-}
-.result-info td:nth-child(7)::before{
-    content: "Physics:";
-}
+
 
 .result-info td{
     text-align: right;
@@ -655,12 +650,20 @@ td::before{
 .result-info{
     padding: 1rem 2rem;
 }
+.result-info table{
+    width: 40rem;
 }
+
+
+
+}
+
+
+
 
 
 /* =================================screen 870px below=========================================== */
 @media(max-width: 870px){
-    
 /* ==============Teacher Acad progress table============= */
 .totalResult th{
     display: none;
@@ -673,8 +676,16 @@ td::before{
     color: var(--bg3);
     text-align: center;
 }
+.totalResult td:nth-child(2){
+    background-color: var(--b5);
+    color: var(--bg3);
+}
 .totalResult td:nth-child(2)::before{
     content: "First-Name:";
+}
+.totalResult td:nth-child(3){
+    background-color: var(--b5);
+    color: var(--bg3);
 }
 .totalResult td:nth-child(3)::before{
     content: "Last-Name:";
@@ -706,7 +717,7 @@ td::before{
 
 
 
-/* ==========================acad student================== */
+/* ==============acad student============ */
 
 .student-acad th{
     display: none;
@@ -731,7 +742,7 @@ td::before{
 .student-acad td:nth-child(5)::before{
     content: "Mathematics:";
 }
-.totalResult.student-acad td:nth-child(6)::before{
+.student-acad td:nth-child(6)::before{
     content: "Chemisry:";
 }
 .student-acad td:nth-child(7)::before{
@@ -773,13 +784,16 @@ td::before{
 }
 .resources-info td::before{
     float: left;
-    margin-right: 3rem;
     font-weight: bold;
 } 
+.resources-info table{
+    margin: 0 auto'
+}
+.ebook{
+    margin-left: -1rem;
+}
   
 
-
-/* ==video== */
 
 
 
@@ -839,10 +853,10 @@ td::before{
 
 }
 
-@media(min-width: 920px){
+@media(min-width: 900px){
     .categories{
         width: 100%;
-        height: 100vh;
+        height: 97vh;
     }
     .menu1{
         display: none;

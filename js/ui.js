@@ -1,5 +1,6 @@
-  //=============media mobile============
-  let display_box = document.querySelector('.display-box');
+  //=============media mobile displayBox============
+  let display_box = document.querySelector('.display-box');//student
+  let display_box1 = document.querySelector('.display-box1');//teacher
 
 // ============student===============
   let additional = document.querySelector('.additional');
@@ -16,6 +17,7 @@ let closeBtn = document.querySelector('.closebtn');
 displayRes.addEventListener('click', () => {
     result.style.display = 'block';
     additional.style.display = 'none';
+    display_box.style.display = 'block';
     resource.style.display = 'none';
     note_table.style.display = 'none';
     studentAcad.style.display = 'none';
@@ -24,8 +26,7 @@ displayRes.addEventListener('click', () => {
 closeBtn.addEventListener('click', () => {
     result.style.display = 'none';
     additional.style.display = 'block';
-    note_table.style.display = 'none';
-    studentAcad.style.display = 'none';
+    display_box.style.display = 'none';
 });
 
 
@@ -36,6 +37,7 @@ let closeBtn1 = document.querySelector('.closebtn1');
 study.addEventListener('click', () => {
     resource.style.display = 'block';
     additional.style.display = 'none';
+    display_box.style.display = 'block';
     result.style.display = 'none';
     note_table.style.display = 'none';
     studentAcad.style.display = 'none';
@@ -43,8 +45,7 @@ study.addEventListener('click', () => {
 closeBtn1.addEventListener('click', () => {
     additional.style.display = 'block';
     resource.style.display = 'none';
-    note_table.style.display = 'none';
-    studentAcad.style.display = 'none';
+    display_box.style.display = 'none';
 });
 
 //===============extra classes/revision==============
@@ -54,6 +55,7 @@ let closeBtn2 = document.querySelector('.closebtn2');
 notifcation.addEventListener('click', () => {
     note_table.style.display = 'block';
     additional.style.display = 'none';
+    display_box.style.display = 'block';
     result.style.display = 'none';
     resource.style.display = 'none';
     studentAcad.style.display = 'none';
@@ -61,8 +63,7 @@ notifcation.addEventListener('click', () => {
 closeBtn2.addEventListener('click', () => {
     additional.style.display = 'block';
     note_table.style.display = 'none'
-    resource.style.display = 'none';
-    studentAcad.style.display = 'none';
+    display_box.style.display = 'none';
 });
 
 // ===========acad progress==========
@@ -72,6 +73,7 @@ let closebtn3 = document.querySelector('.closebtn3');
 Acadprog.addEventListener('click', () => {
     result.style.display = 'none';
     studentAcad.style.display = 'block';
+    display_box.style.display = 'block';
     additional.style.display = 'none';
     resource.style.display = 'none';
     note_table.style.display = 'none';
@@ -79,8 +81,7 @@ Acadprog.addEventListener('click', () => {
 closebtn3.addEventListener('click', () => {
     studentAcad.style.display = 'none';
     additional.style.display = 'block'
-    Admin.style.display = 'none';
-    resource.style.display = 'none';
+    display_box.style.display = 'none';
 });
 
 
@@ -97,13 +98,15 @@ let teachBtn = document.querySelector('.teachBtn');
 teacherScores.addEventListener('click', () => {
     Admin.style.display = 'block';
     teachDis.style.display = 'none';
+    display_box1.style.display = 'block';
     media.style.display = 'none';
     totalResult.style.display = 'none';
+    teachInfo.style.display = 'none';
 });
 teachBtn.addEventListener('click', () => {
     Admin.style.display = 'none';
     teachDis.style.display = 'block'
-    media.style.display = 'none';
+    display_box1.style.display = 'none';
 });
 
 
@@ -114,14 +117,15 @@ let closeMedia = document.querySelector('.closeMedia');
 teachMedia.addEventListener('click', () => {
     media.style.display = 'block';
     teachDis.style.display = 'none';
+    display_box1.style.display = 'block';
     Admin.style.display = 'none';
     totalResult.style.display = 'none';
+    teachInfo.style.display = 'none';
 });
 closeMedia.addEventListener('click', () => {
     media.style.display = 'none';
     teachDis.style.display = 'block'
-    Admin.style.display = 'none';
-    totalResult.style.display = 'none';
+    display_box1.style.display = 'none';
 });
 
 
@@ -133,14 +137,39 @@ let xAcad = document.querySelector('.xAcad');
 teachAcad.addEventListener('click', () => {
     totalResult.style.display = 'block';
     teachDis.style.display = 'none';
+    display_box1.style.display = 'block';
     Admin.style.display = 'none';
     media.style.display = 'none';
+    teachInfo.style.display = 'none';
 });
 xAcad.addEventListener('click', () => {
     totalResult.style.display = 'none';
     teachDis.style.display = 'block'
-    Admin.style.display = 'none';
+    display_box1.style.display = 'none';
 });
+
+
+
+
+// ============extra classes=========
+let revision = document.querySelector('.techRevision');
+let teachInfo = document.querySelector('.teach-info');
+let closeBtn4 = document.querySelector('.closebtn4');
+revision.addEventListener('click', () => {
+    teachInfo.style.display = 'block';
+    teachDis.style.display = 'none';
+    display_box1.style.display = 'block';
+    totalResult.style.display = 'none';
+    Admin.style.display = 'none';
+    media.style.display = 'none';
+});
+closeBtn4.addEventListener('click', () => {
+    teachInfo.style.display = 'none';
+    teachDis.style.display = 'block'
+    display_box1.style.display = 'none';
+});
+
+
 
 
 

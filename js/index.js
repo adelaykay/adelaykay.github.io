@@ -19,8 +19,10 @@ const setCategory = cat => {
 
 // sign user out of auth session
 const logout = () => {
-  auth.signOut()
-  window.location.replace('./index.html')
+  auth.signOut().then(() => {
+    location.replace('./index.html')
+    console.log('here')
+  })
 }
 
 // Form Validation =================================================================

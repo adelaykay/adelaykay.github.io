@@ -78,7 +78,7 @@
 
 
         <!-- ========================Display========================== -->
-        <div class="display-box card">
+        <div class="display-box card" style="overflow-x: auto;">
           <div class="additional">
             <h3 class="displayTitle">Display</h3>
           </div><!--end additional-->
@@ -366,13 +366,13 @@
     
     
             <!-- ========================Display========================== -->
-            <div class="display-box card">
+            <div class="display-box display-box1 card" style="overflow-x: auto;">
               <div class="additional teachDisplay">
                 <h3 class="displayTitle">Display</h3>
               </div><!--end additional-->
     
               <!-- ==========result info============ -->
-                <div class="result-info admin-update" tabindex="1">
+                <div class="admin-update" tabindex="1">
                   <div class="closebtn teachBtn"><img src="./images/close(1).png" alt=""></div>
                   <h3>2nd Semester Exam Result: </h3>
                     <form action="" id="">
@@ -421,13 +421,13 @@
                           <td><input type="text" name="physics" id=""></td>
                         </tr>
                       </table>
-                      <input type="submit" value="upload scores">
+                      <input type="submit" value="upload scores" class="submit">
                     </form>
               </div>
     
 
               <!-- ===========book and video=========== -->
-              <div class="resources-info">
+              <div class="resources-info teach-resource">
                 <form action="" id="">
                 <div class="closebtn1 closeMedia"><img src="./images/close(1).png" alt=""></div>
                 <div class="e-book">
@@ -514,74 +514,58 @@
                     </tr>
                   </table>         
                 </div>
-                <input type="submit" value="upload">
+                <input type="submit" value="upload" class="submit">
               </form>
               </div>
     
     
                  <!-- =================Extra classes============== -->
-                 <div class="notification teach-info">
+                 <div class="teach-info">
                   <form action="" id="">
-                  <div class="notification-table">
-                  <div class="closebtn2"><img src="./images/close(1).png" alt=""></div>
+                  <div class="closebtn2 closebtn4"><img src="./images/close(1).png" alt=""></div>
                   <table>
                     <tr>
-                      <th><i class="fa-solid fa-bell"></i></th>
+                      <th>S/N</th>
                       <th colspan="2" style="text-align: center;"> Notifications</th>
                     </tr>
                     <tr>
+                      <td>#1.</td>
                       <td>
                         <input type="image" id="" src="" alt="" placeholder="image-png">
-                      </td>
-                      <td>
                         <input type="text" id="" placeholder="topic-info">
-                      </td>
-                      <td>
                         <input type="text" name="" id="" placeholder="subject-name">
                         <input type="text" name="" id="" placeholder="date">
                         <input type="text" name="" id="" placeholder="time">
                         <input type="text" name="" id="" placeholder="duration">
                         <input type="text" name="" id="" placeholder="extra-info">
-                      </ul>
                       </td>
                     </tr>
-                    
                     <tr>
+                      <td>#2.</td>
                       <td>
                         <input type="image" id="" src="" alt="" placeholder="image-png">
-                      </td>
-                      <td>
                         <input type="text" id="" placeholder="topic-info">
-                      </td>
-                      <td>
                         <input type="text" name="" id="" placeholder="subject-name">
                         <input type="text" name="" id="" placeholder="date">
                         <input type="text" name="" id="" placeholder="time">
                         <input type="text" name="" id="" placeholder="duration">
                         <input type="text" name="" id="" placeholder="extra-info">
-                      </ul>
                       </td>
                     </tr>
-
                     <tr>
+                      <td>#3.</td>
                       <td>
                         <input type="image" id="" src="" alt="" placeholder="image-png">
-                      </td>
-                      <td>
                         <input type="text" id="" placeholder="topic-info">
-                      </td>
-                      <td>
                         <input type="text" name="" id="" placeholder="subject-name">
                         <input type="text" name="" id="" placeholder="date">
                         <input type="text" name="" id="" placeholder="time">
                         <input type="text" name="" id="" placeholder="duration">
                         <input type="text" name="" id="" placeholder="extra-info">
-                      </ul>
                       </td>
                     </tr>
-                    
                     </table>
-                   </div>
+                    <input type="submit" value="Notify" class="submit">
                   </form>
                  </div>
                  
@@ -656,7 +640,7 @@
     
     
             <!-- =======revision/extra class========== -->
-            <div class="revision card" tabindex="1">
+            <div class="revision techRevision card" tabindex="1">
                 <div class="extra">
                   <i class="fa-solid fa-people-group"></i>
                     <h4>Extra <br>
