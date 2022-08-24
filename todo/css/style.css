@@ -1,0 +1,30 @@
+body {
+    background: linear-gradient(rgb(33, 88, 95) 50%, rgb(14, 43, 44) 100%) fixed;
+}
+input[type=text],
+input[type=text]:focus {
+    color: #fff;
+    border: none;
+    background: rgba(17, 36, 41, 0.8);
+    /* max-width: 400px; */
+}
+.todos{
+    max-height: 60vh;
+    overflow-y: auto;
+}
+.todos li {
+    color: whitesmoke;
+    background: #3a8683;
+}
+.delete,
+.edit {
+    color: #75c0be;
+    cursor: pointer;
+}
+.delete:hover,
+.edit:hover {
+    color: white;
+}
+.filtered {
+    display: none !important;
+}

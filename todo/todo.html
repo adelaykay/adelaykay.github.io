@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/802776c1c1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body class="d-flex flex-column h-100">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-sm-10">
+                <header class="text-center text-light my-4">
+                    <h1 class="mb-4">
+                        Todo List
+                    </h1>
+                    <form action="" class="search">
+                        <input type="text" class="form-control m-auto" placeholder="Search..." autocomplete="off">
+                    </form>
+                </header>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-sm-10">
+                <ul class="list-group todos mx-auto">
+                    <li class="list-group-item d-flex  justify-content-between align-items-center">
+                        <span>Play Fifa Mobile</span>
+                        <i class=" edit ms-auto me-4 fa-solid fa-pen-to-square"></i>
+                        <i class="far fa-trash-alt delete"></i>
+                    </li>
+                    <li class="list-group-item d-flex  justify-content-between align-items-center">
+                        <span>Top the crew in CSR2</span>
+                        <i class=" edit ms-auto me-4 fa-solid fa-pen-to-square"></i>
+                        <i class="far fa-trash-alt delete"></i>
+                    </li>
+                    <li class="list-group-item d-flex  justify-content-between align-items-center">
+                        <span>Make a Noodle Pie</span>
+                        <i class=" edit ms-auto me-4 fa-solid fa-pen-to-square"></i>
+                        <i class="far fa-trash-alt delete"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-sm-10">
+                <form action="" class="add text-center my-4">
+                    <!-- <label for="add" class="text-light">
+                        Add a new todo...
+                    </label> -->
+                    <input type="text" class="form-control m-auto" name="add" placeholder="Add a new todo..." autocomplete="off">
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-auto text-light text-center">
+        <div class="container">
+            <p>© sl33k works</p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
