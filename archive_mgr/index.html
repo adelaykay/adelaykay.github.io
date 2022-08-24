@@ -1,0 +1,110 @@
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <title>MAM</title>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div class="container-fluid">
+      <div class="row justify-content-center text-center text-md-start">
+        <div class="col-10">
+          <h1 class="my-3 text-center">Music Archive Manager</h1>
+
+          <form class="add align-start">
+            <label class="form-label" for="title">Title</label>
+            <input class="form-control" type="text" name="title" required placeholder="Enter Title" />
+            <label class="form-label" for="composer">Composer</label>
+            <input class="form-control" type="text" name="composer" placeholder="Enter Composer" />
+            <label class="form-label text-nowrap" for="arranged_by">Arranged by</label>
+            <input
+              class="form-control"
+              type="text"
+              name="arranged_by"
+              placeholder="Enter Arranger"
+              required
+            />
+            <label class="form-label" for="year">Year</label>
+            <input class="form-control" type="number" name="year" maxlength="4" placeholder="Enter Year Of Composition"/>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <button type="text" class="btn btn-success my-3 col-md-3 col-lg-2">
+                Add new score
+              </button>
+            </div>
+            
+          </form>
+
+          <div id="content">
+            <table
+              id="books"
+              cellpadding="10px"
+              class="table table-bordered table-success"
+            >
+              <thead class="table-success">
+                <tr class="bg-secondary">
+                  <th>Title</th>
+                  <th>Composed By</th>
+                  <th>Arranged By</th>
+                  <th>Year</th>
+                </tr>
+              </thead>
+              
+
+              
+              <tbody class="font-monospace">
+                
+              </tbody>
+            </table>
+            <div class="ph placeholder bg-success placeholder-wave placeholder-lg mb-2 col-12">
+              <span class="placeholder bg-success placeholder-wave placeholder-lg col-12 py-3"></span>
+              <span class="placeholder bg-success placeholder-wave placeholder-lg col-12 py-3"></span>
+              <span class="placeholder bg-success placeholder-wave placeholder-lg col-12 py-3"></span>
+            </div>
+          </div>
+          <div class="gap-2 d-flex mb-4">
+            <button class="btn btn-outline-dark col-md-2 col-4 prev" type="button">Previous</button>
+            <button class="btn btn-outline-dark ms-auto col-md-2 col-4 next" type="button">Next</button>
+          </div>
+          <!-- <ul class="d-grid list-unstyled d-sm-flex justify-content-between">
+            <li class="my-3">
+            </li>
+            <li class="push my-3">
+              <button class="btn btn-outline-secondary prev">Previous</button>
+              <button class="btn btn-outline-secondary next">Next</button>
+            </li>
+          </ul> -->
+
+          <form class="search">
+            <label for="title">Score Title</label>
+            <input type="text" class="form-control" name="title" required />
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <button class="btn btn-warning my-3 col-md-2">Search</button>
+            </div>
+          </form>
+
+          <form class="delete">
+            <label for="id">Score Id</label>
+            <input type="text" class="form-control" name="id" required />
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+              <button class="btn btn-danger my-3 col-md-2">Delete score</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="footer mt-auto text-center">
+      <div class="container text-shadow">
+          <p>© sl33k works</p>
+      </div>
+    </footer>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
