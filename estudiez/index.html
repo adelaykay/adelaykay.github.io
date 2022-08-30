@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eStudiez</title>
+
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous" />
+
+    <!-- Javascript bootstrap link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+    <!-- =====font awesome===== -->
+    <script
+      src="https://kit.fontawesome.com/a2c8a30440.js"
+      crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/images/logo-sm1.png" type="image/x-icon" />
+    <!-- ========css======== -->
+
+    <!-- google fonts montserrat -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- end google font monserrat -->
+  </head>
+  <body class="h-100">
+
+
+    
+    <div
+      class="vh-100"
+      style="
+        background: url(./assets/images/landing.jpg) center fixed;
+      ">
+      <img src="./assets/images/logo-main-blue.png" width="200px" class="p-1" />`
+
+      <div
+        class="container d-flex flex-column align-items-md-start align-items-center justify-content-center"
+        style="height: 80vh">
+        <div class="welcome text-center text-md-start">
+          <h1 style="font-size: 4rem">Welcome to eStudiez</h1>
+          <p>Begin your journey to excellence</p>
+        </div>
+
+        <div class="list-unstyled d-flex">
+          <!-- Signup button  -->
+          <li class="p-2">
+            <button
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModalToggle"
+              role="button"
+              >Sign up</button
+            >
+          </li>
+
+          <!-- Login button  -->
+          <li class="p-2">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#login"
+              data-bs-whatever="@mdo">
+              Sign in
+            </button>
+          </li>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sign up modals 1 & 2 -->
+    <div
+      class="modal fade"
+      id="signupModalToggle"
+      aria-hidden="true"
+      aria-labelledby="signupModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalToggleLabel">
+              Category
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Sign up as a parent, student or faculty.
+          </div>
+          <div id="setCategory" class="modal-footer">
+            <button
+              class="btn btn-primary"
+              data-bs-target="#signUpModal"
+              data-bs-toggle="modal">
+              Faculty
+            </button>
+            <button
+              class="btn btn-primary"
+              data-bs-target="#signUpModal"
+              data-bs-toggle="modal">
+              Student
+            </button>
+            <button
+              class="btn btn-primary"
+              data-bs-target="#signUpModal"
+              data-bs-toggle="modal">
+              Parent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="signUpModal"
+      aria-hidden="true"
+      aria-labelledby="signUpModalLabel"
+      tabindex="1">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg modal-fullscreen-md-down">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title signupTitle"
+              id="signUpModalLabel">
+              Sign Up
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row g-2">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <form id="signup" class="needs-validation"
+                  
+                  novalidate>
+                    <div class="card h-100">
+                      <div class="card-body">
+                        <div class="row gutters">
+                          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h6 class="mb-2 text-primary">Contact Details</h6>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                              <label for="first_name">First Name</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="first_name"
+                                name="first_name"
+                                placeholder="Enter your first name"
+                                required
+                                autofocus />
+                            </div>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                              <label for="last_name">Last Name</label>
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="last_name"
+                                name="last_name"
+                                placeholder="Enter your last name"
+                                required />
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-group">
+                              <label for="email">Email Address</label>
+                              <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email address"
+                                required />
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-group">
+                              <label for="address">Address</label><br />
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="address"
+                                name="address"
+                                placeholder="Address"
+                                required /><br />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row gutters">
+                          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h6 class="mb-2 text-primary">Personal Information</h6>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                              <label for="password">Password</label>
+                              <input
+                                type="password"
+                                class="form-control"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                required />
+                            </div>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                              <label for="confirmPassword">Confirm Password</label>
+                              <input
+                                type="password"
+                                class="form-control"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm password"
+                                required />
+                            </div>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 parentHide facHide">
+                            <div class="form-group">
+                              <label for="age">Age</label><br />
+                              <input
+                                type="number"
+                                id="age"
+                                name="age"
+                                class="age"
+                                placeholder="Age" />
+                            </div>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                              <label for="gender">Gender</label><br />
+                              <label for="gender">Male</label>
+                              <input
+                                type="radio"
+                                name="gender"
+                                class="ms-3"
+                                value="Male"
+                                required /><br />
+                              <label for="gender">Female</label>
+                              <input
+                                type="radio"
+                                name="gender"
+                                class="ms-1 mb-3"
+                                value="Female"
+                                required /><br />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row gutters">
+                          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h6 class="mb-2 text-primary">Other Information</h6>
+                          </div>
+                          <div class="parentHide col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                              <label for="eduClass">Select your class</label>
+                                <select
+                                  class="form-control"
+                                  id="eduClass"
+                                  name="eduClass"
+                                  required>
+                                  <option value="" disabled selected>
+                                    Please choose one
+                                  </option>
+                                  <option value="SS1">SS1</option>
+                                  <option value="SS2">SS2</option>
+                                  <option value="SS3">SS3</option>
+                                </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="facHide parentHide form-group">
+                              <label for="studentId">Student ID</label>
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  id="studentId"
+                                  name="studentId"
+                                  placeholder="Enter your ID number"
+                                  title="A 6 digit id number issued by the school"
+                                  maxlength="6"
+                                  required
+                                />
+                            </div>
+                          </div>
+                          <div class="facHide studHide col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                            <div class="form-group">
+                              <label for="childId" id="childId">Child/Ward's ID</label
+                                ><br />
+                                <input
+                                  type="number"
+                                  name="childId"
+                                  id="childId"
+                                  class="childId"
+                                  title="This is a 6 digit number issued by the registry to your child or ward"
+                                  placeholder="Your child or ward's Id" />
+                            </div>
+                          </div>
+                          <br />
+                          <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                            <button type="submit" id="submit" class="btn btn-primary my-3 col-md-3 col-lg-2">
+                              Submit
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="login"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">
+              LOGIN TO YOUR ACCOUNT
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form
+              id="loginForm"
+              action="./index.html"
+              style="
+                overflow-y: auto !important;
+                max-height: 5 0vh !important;
+              ">
+              <div>
+                <label class="loginEmail" id="emailLabel" for="loginEmail"
+                  >Email Address</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="loginEmail"
+                  name="loginEmail"
+                  placeholder="Your Email" />
+              </div>
+
+              <div>
+                <label
+                  class="form-label"
+                  for="loginPassword"
+                  id="loginPassword"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                  name="loginPassword"
+                  placeholder="Password" /><br />
+              </div>
+
+              <input
+                type="submit"
+                class="btn btn-primary"
+                value="Sign in" />
+                <input type="button" class="btn btn-secondary" value="Close" data-bs-dismiss="modal"/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/bundle.js"></script>
+  </body>
+</html>
